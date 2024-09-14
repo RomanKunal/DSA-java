@@ -8,7 +8,7 @@ import java.util.List;
 public class Three_Sum {
     public static void main(String[] args) {
         int[] arr={-1,0,1,2,-1,-4};
-        List<List<Integer>> ans=optimal(arr,0);
+        List<List<Integer>> ans=optimal(arr);
         for (List<Integer> it : ans) {
             System.out.print("[");
             for (Integer i : it) {
