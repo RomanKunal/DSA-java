@@ -26,7 +26,6 @@ public class Aggressive_Cows {
         int n = stalls.length; //size of array
         //sort the stalls[]:
         Arrays.sort(stalls);
-
         int limit = stalls[n - 1] - stalls[0];
         for (int i = 1; i <= limit; i++) {
             if (canWePlace(stalls, i, k) == false) {
