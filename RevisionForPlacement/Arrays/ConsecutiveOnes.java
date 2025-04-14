@@ -7,15 +7,15 @@ public class ConsecutiveOnes {
     }
     static int check(int[] arr){
         int count=0;
-        int res=0;
-        for (int i = 0; i < arr.length; i++) {
+        int maxi=0;
+        for (int i = 0; i <arr.length ; i++) {
             if(arr[i]==1){
                 count++;
             }else{
                 count=0;
             }
-            res=Math.max(res,count);
+            maxi=Math.max(maxi,count);
         }
-        return res;
+        return maxi;
     }
 }
