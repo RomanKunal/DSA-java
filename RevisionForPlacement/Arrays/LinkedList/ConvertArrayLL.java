@@ -16,7 +16,11 @@ public class ConvertArrayLL {
         int[] arr={2,4,6,8};
         Node1 node=convert(arr);
         System.out.println(node.next);
-
+        Node1 temp=node;
+        while(temp!=null){
+            System.out.println(temp.data);
+            temp=temp.next;
+        }
     }
     private static Node1 convert(int[] arr){
         Node1 head=new Node1(arr[0]);
@@ -29,4 +33,5 @@ public class ConvertArrayLL {
         }
         return head;
     }
+
 }
