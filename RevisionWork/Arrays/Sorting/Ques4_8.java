@@ -60,7 +60,7 @@ public class Ques4_8 {
         return head;
     }
     // Delete Value  2-3-4-5-6 delete 4
-    static Node deleteNodeVal(Node head,int target){
+    static Node deleteNodeVal(Node head, int target){
         if(head==null) return null;
         Node temp=head;
         Node prev=null;
@@ -75,7 +75,7 @@ public class Ques4_8 {
         return head;
     }
     // Delete any node
-    static Node deleteAnyNode(Node head,int k){
+    static Node deleteAnyNode(Node head, int k){
         if(head==null){
             return null;
         }
@@ -94,7 +94,7 @@ public class Ques4_8 {
         return head;
     }
     // Insertion At Head
-    static Node insertAtHead(Node head,int element){
+    static Node insertAtHead(Node head, int element){
         Node temp=new Node(element,head);
         return temp;
     }
@@ -133,7 +133,7 @@ public class Ques4_8 {
         return head;
     }
     // Insertion Before Specific element
-    static Node insertBeforeElement(Node head,int element,int beforelement){
+    static Node insertBeforeElement(Node head, int element, int beforelement){
         Node temp=head;
         while (temp.next!=null){
             if(temp.next.data==beforelement){
