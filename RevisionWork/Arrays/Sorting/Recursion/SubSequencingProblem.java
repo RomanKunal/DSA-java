@@ -9,9 +9,18 @@ public class SubSequencingProblem {
 ////        printList(res);
 //        printsumK(0,arr,curr,res,0,2);
 //        printList(res);
-        int[] arr={2,3,1,4,3,5,7,9};
-        mergeSort(arr,0,arr.length-1);
-        System.out.println(Arrays.toString(arr));
+//        int[] arr={2,3,1,4,3,5,7,9};
+//        mergeSort(arr,0,arr.length-1);
+//        System.out.println(Arrays.toString(arr));
+        ArrayList<Integer>  arr=new ArrayList<>();
+        arr.add(5);
+        arr.add(2);
+        arr.add(1);
+        ArrayList<Integer> res=SubSetWork(arr);
+        for (int i:res) {
+            System.out.print(i+" ");
+        }
+        System.out.println();
     }
     // Print all subsequences
     static void allSubsequences(int index, int[] arr, ArrayList<Integer> current, ArrayList<ArrayList<Integer>> ans) {
@@ -143,5 +152,20 @@ public class SubSequencingProblem {
         List<List<Integer>> ans=new ArrayList<>();
         find(0,candidates,target,ans,new ArrayList<>());
         return ans;
+    }
+    // SubsetSum
+    static void subSetSum(int index,int sum,ArrayList<Integer> arr,ArrayList<Integer> subset){
+        if (index==arr.size()){
+            subset.add(sum);
+            return;
+        }
+        subSetSum(index+1,sum+arr.get(index),arr,subset);
+        subSetSum(index+1,sum,arr,subset);
+    }
+    static ArrayList<Integer> SubSetWork(ArrayList<Integer> arr){
+        ArrayList<Integer> sumsubset=new ArrayList<>();
+        subSetSum(0,0,arr,sumsubset);
+        Collections.sort(sumsubset);
+        return sumsubset;
     }
 }
