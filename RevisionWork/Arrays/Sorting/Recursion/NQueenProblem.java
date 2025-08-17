@@ -10,7 +10,6 @@ public class NQueenProblem {
             }
             System.out.println();
         }
-
     }
     // N queen problem
     static void solve(int row, List<List<String>> ans, char[][] board,
@@ -50,7 +49,6 @@ public class NQueenProblem {
         int[] leftrow = new int[n];           // Track columns
         int[] lowerDia = new int[2 * n - 1];  // Track lower diagonals
         int[] upperDia = new int[2 * n - 1];  // Track upper diagonals
-
         solve(0, ans, board, leftrow, upperDia, lowerDia, n);
         return ans;
     }
